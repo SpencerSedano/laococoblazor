@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# My JSON settings and Db Connection 
+appsettings.json
+
 # User-specific files
 *.rsuser
 *.suo
