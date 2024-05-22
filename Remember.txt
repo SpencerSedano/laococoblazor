@@ -1,0 +1,4 @@
+﻿My database:
+Scaffold-DbContext -Connection "Server=SPENCER\SQLEXPRESS;Database=elderly;User=spencersedano;Password=1234;TrustServerCertificate=True" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context LaococoDbContext
+
+Hi
