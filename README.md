@@ -4,3 +4,31 @@ This is a system using Blazor as the frontend framework. It was talked to use th
 
 ## How to try it on your machine (怎麼安裝在你的電腦)
 
+1. Clone this repository into your local machine
+2. Open your cloned repository using Visual Studio (You can use Visual Studio Code, but Visual Studio is recommended)
+3. Add a file into your main directory, at the level of Program.cs, and named it as "appsettings.json".
+
+Then, add the following: 
+```
+  {
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "DatabaseConnection": "Server=yoursqlservername;Database=yourdatabase;User=yourusername;Password=yourpassword;TrustServerCertificate=True"
+  },
+  "AllowedHosts": "*"
+}
+```
+
+Please change the information in "DatabaseConnection" to your database information.
+
+###Note
+If my database and your database are not the same. Please delete the "Models" folder. After deleting the "Models" folder, in your Visual Studio, go to Tools, NuGet Package Manager, and Package Manager Console.
+Run the following command
+```
+Scaffold-DbContext -Connection "Server=yoursqlservername;Database=yourdatabase;User=yourusername;Password=yourpassword;TrustServerCertificate=True" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context LaococoDbContext
+```
