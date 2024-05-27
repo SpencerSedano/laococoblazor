@@ -6,7 +6,8 @@ This is a system using Blazor as the frontend framework. It was talked to use th
 
 1. Clone this repository into your local machine
 2. Open your cloned repository using Visual Studio (You can use Visual Studio Code, but Visual Studio is recommended)
-3. Add a file into your main directory, at the level of Program.cs, and named it as "appsettings.json".
+3. Install Entity Framework Tools
+4. Add a file into your main directory, at the level of Program.cs, and named it as "appsettings.json".
 
 Then, add the following: 
 ```
@@ -26,9 +27,12 @@ Then, add the following:
 
 Please change the information in "DatabaseConnection" to your database information.
 
-###Note
+### Note
 If my database and your database are not the same. Please delete the "Models" folder. After deleting the "Models" folder, in your Visual Studio, go to Tools, NuGet Package Manager, and Package Manager Console.
-Run the following command
+
+#### Run the following command
 ```
 Scaffold-DbContext -Connection "Server=yoursqlservername;Database=yourdatabase;User=yourusername;Password=yourpassword;TrustServerCertificate=True" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context LaococoDbContext
 ```
+
+After running this command, you will get a folder called Models. Now, your database and Blazor application will be linked.
