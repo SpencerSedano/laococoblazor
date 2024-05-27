@@ -4,7 +4,7 @@ Database to Blazor
 1. Install Entity Framework Tools
 
 My database:
-Scaffold-DbContext -Connection "Server=SPENCER\SQLEXPRESS;Database=elderly;User=spencersedano;Password=1234;TrustServerCertificate=True" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context LaococoDbContext
+Scaffold-DbContext -Connection "Server=yoursqlservername;Database=yourdatabase;User=yourusername;Password=yourpassword;TrustServerCertificate=True" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context LaococoDbContext
 
 Just in case: 
 Add-Migration -name of migration-
