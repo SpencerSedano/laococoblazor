@@ -1,4 +1,11 @@
-﻿My database:
+﻿
+Database to Blazor
+
+1. Install Entity Framework Tools
+
+My database:
 Scaffold-DbContext -Connection "Server=SPENCER\SQLEXPRESS;Database=elderly;User=spencersedano;Password=1234;TrustServerCertificate=True" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context LaococoDbContext
 
-Hi
+Just in case: 
+Add-Migration -name of migration-
+Update-Database

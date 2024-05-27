@@ -14,6 +14,8 @@ namespace laococoblazor
       builder.Services.AddRazorComponents()
           .AddInteractiveServerComponents();
 
+      // My Database Connection (SQL Server)
+
 		  builder.Services.AddDbContext<LaococoDbContext>(options =>
 								options.UseSqlServer(builder.Configuration.GetConnectionString("DatabaseConnection")));
 
